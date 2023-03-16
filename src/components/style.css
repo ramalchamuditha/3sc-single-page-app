@@ -1,14 +1,57 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header{
+    position: flex;
+    width: 100% ;
+    margin: auto;
+}
+
+.row1{
+    background-color: dodgerblue;
+    color: white;
+    font-size: 15px;
+    padding-top: 1px;
+    text-align: center;
+    height: 80px;
+}
+
+.row2{
+    margin-top: 30px;
+    font-size: 15px;
+}
+
 .container{
     width: 65%;
     margin: 0 auto;
     margin-top: 25px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
-    box-sizing: border-box;
+    grid-template-columns: repeat(3, minmax(200px, 0.5fr));
+    box-sizing: border-box;    
+}
+
+.container img{
+    border: 1px solid gray;
+    border-radius: 1rem;
+    width: 100%;
 }
 
 .card{
-    background-color: aqua;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 40px;
+    /*box-shadow: 0 5px 5px rgba(212, 185, 150, .5);*/
+    transition: .5s;
+    border: 1px ridge silver;
+    text-align: center;
+    position: relative;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.card1{
+    background-color: crimson;
     border-radius: 1rem;
     padding: 0.5rem;
     margin-bottom: 10px;
@@ -16,9 +59,19 @@
     transition: .5s;
     text-align: center;
     position: relative;
+    margin-left: 1.5rem;
 }
 
 .card .name{
     display: flex;
-    flex-direction: column;
+    margin-top: 15px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card .email{
+    font-size: 15px;
+    text-align: left;
+    margin: 5px 0 15px 0;
 }

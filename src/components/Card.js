@@ -1,26 +1,18 @@
 import React from 'react'
 
-const Card = ({user}) => {
-  return (
-    <>
-        {
-            user.map((item)=>{
-                let firstName = item.first_name;
-                let email = item.email;
-                let pfp = item.avatar;
-                return(
-                    <div className="card">
-                        <div><img src={pfp} /></div>
-                        <div className="name">{firstName}</div>
-                        <div className="email">{email}</div>
-                    </div>
-                )
-            })
-            
-        }
-        
-    </>
-  )
+const Card = ({ user }) => {
+    return (
+        <>
+            {
+                <div className="card1">
+                    <div><img src={user.avatar} /></div>
+                    <div className="name">{user.first_name}</div>
+                    <div className="name">{user.last_name}</div>
+                    <div className="email">{user.email}</div>
+                </div>
+            }
+        </>
+    )
 }
 
 export default Card
