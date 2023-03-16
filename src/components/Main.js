@@ -37,7 +37,7 @@ const Main = (props) => {
             {
               userData.map((item) => {
                 return (
-                  <div className="card" onClick={() => handleClick(item.id)}>
+                  <div className="card" key={item.id}onClick={() => handleClick(item.id)}>
                     <div><img src={item.avatar} /></div>
                     <div className="name">{item.first_name}</div>
                     <div className="email">{item.email}</div>
