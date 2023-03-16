@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import Card from './Card';
 
-const Main = () => {
+const Main = (props) => {
   const [userData, setUserData] = useState([]);
-  const [currentUser, setCurrentUser] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get('https://reqres.in/api/users?page=1')
@@ -14,13 +14,10 @@ const Main = () => {
 
   const handleClick = (_id) => {
     console.log(_id);
-    if(_id !== null){
-      axios.get('https://reqres.in/api/users/' + _id)
-      //.then(res=> console.log(res.data.data))
-      .then(res => setCurrentUser(res.data.data))
-      .catch(err => console.log(err));
+    if (_id !== null) {     
+      navigate("/info",{state: {id: _id}});
     }
-    
+
   }
 
   return (
@@ -40,24 +37,19 @@ const Main = () => {
             {
               userData.map((item) => {
                 return (
-                  <div className="card" key={item.id} onClick={() => handleClick(item.id)}>
+                  <div className="card" onClick={() => handleClick(item.id)}>
                     <div><img src={item.avatar} /></div>
                     <div className="name">{item.first_name}</div>
-                    <div className="email">{item.email}</div>                    
+                    <div className="email">{item.email}</div>
                   </div>
                 )
               })
-
             }
-          </>
-          <>
-          {
-            <Card user={currentUser} />
-          }
           </>
         </>
       </div>
     </>
+
   )
 }
 

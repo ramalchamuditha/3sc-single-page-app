@@ -33,12 +33,12 @@
 
 .container img{
     border: 1px solid gray;
-    border-radius: 1rem;
+    border-radius: 180px;
     width: 100%;
 }
 
 .card{
-    border-radius: 1rem;
+    border-radius: 15px;
     padding: 0.5rem;
     margin-bottom: 40px;
     /*box-shadow: 0 5px 5px rgba(212, 185, 150, .5);*/
@@ -48,18 +48,6 @@
     position: relative;
     margin-left: 30px;
     cursor: pointer;
-}
-
-.card1{
-    background-color: crimson;
-    border-radius: 1rem;
-    padding: 0.5rem;
-    margin-bottom: 10px;
-    box-shadow: 0 5px 5px rgba(212, 185, 150, .5);
-    transition: .5s;
-    text-align: center;
-    position: relative;
-    margin-left: 1.5rem;
 }
 
 .card .name{
@@ -74,4 +62,76 @@
     font-size: 15px;
     text-align: left;
     margin: 5px 0 15px 0;
+}
+
+.header-1{
+    background-color: dodgerblue;
+    height: 80px;
+    padding-top: 5px;
+}
+
+.row-back{
+    padding-top: 10px;
+    font-size: 10px;
+}
+
+.header-1 .row-back h1{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.user-container{
+    width: 80%;
+    margin-top: 60px;
+    margin-left: 50px;
+    height: 450px;
+    /*border: 1px solid black;*/
+    display: flex;
+}
+
+.user-container img{
+    width: 300px;
+    height: 300px;
+    border-radius: 180px;
+    margin: 10px;
+}
+
+.card-1{
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    margin: 10px 0 0 100px;
+    /*border: 1px solid black;*/
+    height: 80%;
+    width: 90%;
+}
+
+.card-1 .card-details{
+    border-radius: 15px;
+    box-shadow: 0 5px 5px rgba(212, 185, 150, .5);
+    transition: .5s;
+    height: 60%;
+    width: 60%;
+    background-color: rgb(240, 240, 240);
+    border: 1px ridge silver;
+    position: relative;
+    margin: 40px 20px 0 0 ;  
+    font-size: 25px;
+    font-weight: bold;
+    justify-content: space-between;
+    display: flex;
+}
+
+.card-1 .card-details .card-labels{
+    padding: 20px;
+    border: 1px solid black;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.card-1 .card-details .card-data{
+    padding: 20px;
+    /*border: 1px solid black;*/
+    margin-left: 40px;
+    margin-top: 30px;
 }
